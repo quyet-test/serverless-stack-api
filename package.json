@@ -5,7 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "test": "serverless-bundle test",
-    "dynamo:start": "sls dynamodb start --migrate",
+    "dynamo:start": "sls dynamodb start --migrate --stage test",
     "dynamo:install": "sls dynamodb install"
   },
   "author": "",
@@ -21,6 +21,7 @@
     "serverless-offline": "^5.3.3"
   },
   "dependencies": {
+    "serverless-dynamodb-client": "0.0.2",
     "uuid": "^3.4.0"
   }
 }
