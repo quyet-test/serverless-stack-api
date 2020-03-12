@@ -2,11 +2,11 @@ var params = {
   TableName: 'notes',
   KeySchema: [ // The type of of schema.  Must start with a HASH type, with an optional second RANGE.
     { // Required HASH type attribute
-      AttributeName: 'noteId',
+      AttributeName: 'userId',
       KeyType: 'HASH'
     },
     { // Optional RANGE key type for HASH + RANGE tables
-      AttributeName: 'userId',
+      AttributeName: 'noteId',
       KeyType: 'RANGE'
     }
   ],
