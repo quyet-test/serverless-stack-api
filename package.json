@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "serverless-bundle test",
+    "test": "jest",
+    "sls_test": "serverless-bundle test",
     "dynamo:start": "sls dynamodb start --migrate --stage test",
     "dynamo:install": "sls dynamodb install"
   },
@@ -25,13 +26,15 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
+    "jest-puppeteer": "^4.4.0",
     "serverless-bundle": "^1.2.5",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^5.3.3",
-    "serverless-dynamodb-local": "^0.2.39"
+    "serverless-dynamodb-local": "^0.2.39",
+    "serverless-offline": "^5.3.3"
   },
   "dependencies": {
     "serverless-dynamodb-client": "0.0.2",
+    "stripe": "^8.30.0",
     "uuid": "^3.4.0"
   }
 }
